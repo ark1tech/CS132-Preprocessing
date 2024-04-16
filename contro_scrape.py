@@ -27,7 +27,7 @@ def main():
     else:
         subreddit = reddit.subreddit("AntiworkPH")
         count = 1
-        with open('stream.csv', 'w', newline='') as file:
+        with open('controversial.csv', 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([
                 "Timestamp",
@@ -41,7 +41,7 @@ def main():
                 "Permalink",
                 "Reddit ID"
             ])
-            for submission in subreddit.stream.submissions():
+            for submission in subreddit.controversial(time_filter="all", limit=1000):
 
                 time.sleep(1)
 
