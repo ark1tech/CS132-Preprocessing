@@ -105,3 +105,4 @@ ojt=on the job training
 coz=because
 idk=do not know
 i.t.=information technology
+bos=business operating system
